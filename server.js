@@ -7,11 +7,6 @@ const PORT = process.env.PORT || 9000;
 // Create an HTTP server
 const server = http.createServer(app);
 
-// Create a PeerJS server instance with debug enabled
-const peerServer = ExpressPeerServer(server, {
-    debug: true
-});
-
 // Mount the PeerJS server on the /peerjs route
 const peerServer = PeerServer({
     port: PORT,
