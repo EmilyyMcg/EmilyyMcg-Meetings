@@ -1,7 +1,7 @@
 
 
 const peer = new Peer({
-    host: 'localhost',
+    host: 'learning-lounge-meetings.onrender.com',
     port: 9000,
     path: '/peerjs'
 });
