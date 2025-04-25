@@ -1,0 +1,114 @@
+body {
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+  }
+  
+  h1 {
+    
+    text-align: center;
+    font-size: 3.0em;
+    color :purple;
+  }
+  
+  p {
+   align-items: center;
+  }
+
+/* Navigation Bar */
+.navigation {
+  background-color: #CBC3E3;
+  display: flex; /* Aligns items in a row */
+  justify-content: right; /* Align items to the left */
+  padding: 10px;
+}
+
+/* Navigation Links & Dropdown Button */
+.navigation a, .dropbtn {
+  color: purple;
+  border: 2px solid transparent; /* Invisible border to prevent layout shift */
+  font-size: 1.5em;
+  padding: 12px 20px;
+  margin: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+  background: none;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.navigation a:hover, .dropbtn:hover {
+  color: white;
+  background-color: purple;
+  
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative; /* Helps with dropdown positioning */
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropDownContent {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Dropdown Buttons */
+.dropDownContent button {
+  width: 100%;
+  color: purple;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+/* Hover Effect for Dropdown Buttons */
+.dropDownContent button:hover {
+  background-color: #ddd;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropDownContent {
+  display: block;
+}
+
+
+#remote-video-container video {
+    width: 45%;
+    margin: 5px;
+}
+#join-screen, #controls {
+    margin-bottom: 20px;
+}
+#join-screen input, #join-screen button, #controls button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+.video-wrapper {
+    display: inline-block;
+    position: relative;
+}
+.video-wrapper video {
+    width: 100%;
+}
+.video-wrapper .label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}

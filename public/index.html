@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeerJS WebRTC App</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navigation">
+        <a href="http://localhost:3306">Home</a>
+        <a href="http://localhost:3306/login">Login/Register</a>
+        <a href="info.html">Info</a>
+        <a href="contactUS.html">Contact Us</a>
+        <a href="/">Meetings</a>
+        <div class="dropdown">
+            <button class="dropbtn">Settings</button>
+            <div class="dropDownContent">
+                <button id="bigger">Bigger Text</button>
+                <button id="EasyRead">Easy Read</button>
+            </div>
+        </div>
+    </nav>
+    <h1>Welcome to your meetings </h1>
+    <div id="join-screen">
+        <div>
+            <label for="peer-id">Your ID:</label>
+            <input type="text" id="peer-id" readonly>
+        </div>
+        <div>
+            <label for="connect-id">Connect to Peer ID:</label>
+            <input type="text" id="connect-id">
+            <button id="connect-button">Connect</button>
+        </div>
+    </div>
+    <div id="controls">
+        <button id="disconnect-button">Disconnect</button>
+        <button id="mute-button">Mute</button>
+        <button id="stop-video-button">Stop Video</button>
+    </div>
+    <div id="remote-video-container"></div>
+    <script type="module" src="main.js"></script>
+    <script src="../node_modules/peerjs/dist/peerjs.min.js"></script>
+    
+</body>
+</html>
