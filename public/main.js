@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-console.log("DOM LOADED");
-    const Peer = new Peer("pick-an-id");
+    console.log("DOM LOADED");
     const peer = new Peer({
         host: 'learning-lounge-meetings.onrender.com',
         port: 9000,
@@ -9,8 +8,12 @@ console.log("DOM LOADED");
 
     peer.on('open', id => {
         document.getElementById('peer-id').value = id;
+    }).on('error', err => {
+        console.error('PeerJS Error:', err);
+        alert('An error occurred while establishing the peer connection.');
     });
     let currentCall;
+        let localStream;
 
     document.getElementById('connect-button').addEventListener('click', () => {
         const peerId = document.getElementById('connect-id').value;
@@ -89,10 +92,6 @@ console.log("DOM LOADED");
     }
 
 
-
-
-
-    let localStream;
 
     navigator.mediaDevices.getUserMedia({
         video: true,
