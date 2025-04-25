@@ -4,9 +4,6 @@ const http = require('http');
 const app = express();
 const PORT = process.env.PORT || 9000;
 
-// Initialize Express app
-const app = express();
-
 // Create an HTTP server
 const server = http.createServer(app);
 
