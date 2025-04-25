@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM LOADED");
-    const peer = new Peer({
+    const peer = new Peer(undefined,{
         host: 'learning-lounge-meetings.onrender.com',
-        port: 9000,
-        path: '/peerjs'
+        port: 443,
+        path: '/peerjs',
+        secure: true,
     });
 
     peer.on('open', id => {
