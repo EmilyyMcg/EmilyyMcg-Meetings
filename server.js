@@ -1,7 +1,6 @@
 const express = require('express');
 const { ExpressPeerServer } = require('peer');
 const http = require('http');
-const Peer = new Peer("pick-an-id");
 
 
 // Initialize Express app
