@@ -1,5 +1,5 @@
 const express = require('express');
-const { ExpressPeerServer } = require('peer');
+const PeerServer = require('peer').PeerServer;
 const http = require('http');
 const app = express();
 const PORT = process.env.PORT || 9000;
