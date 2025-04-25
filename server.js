@@ -9,10 +9,10 @@ const server = http.createServer(app);
 
 // Mount the PeerJS server on the /peerjs route
 const peerServer = PeerServer({
-    port: PORT,
+    port: 9000, // or the port Render assigns you
     path: '/peerjs',
     cors: {
-        origin: '*',  // Allow all domains, adjust if you have specific domains
+        origin: 'https://learning-lounge-meetings.onrender.com/', // The domain of your frontend
         methods: ['GET', 'POST']
     }
 });
